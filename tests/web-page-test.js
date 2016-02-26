@@ -28,8 +28,9 @@ describe('Suite: Homeppage', function() {
         .waitForElementPresent('#url', 5000)
         .resizeWindow(1920, 1200)
         .setValue('#url', 'http://www.ganatantra.com/')
+        .setValue('select[name=' + browser + ']')
         .click('input[name=submit]')
-        .pause(2000)
+        .pause(1000)
         .url(function(res){
           console.log('web-page-test-url: ', res.value);
         })
