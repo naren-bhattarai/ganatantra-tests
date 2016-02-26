@@ -15,13 +15,13 @@ describe('Suite: Homeppage', function() {
   /* end: setup and teardown */
 
   /* begin: tests */
-  it('Launch homepage', function (client) {
+  it('/GET homepage (tablet)', function (client) {
     var homepage = new client.page.home();
     homepage
       .navigate()
       .waitForPageToLoad();
-    client.maximizeWindow();
-    client.saveScreenshot('./data/a.png');
+    client.resizeWindow(1024, 768);
+    client.saveScreenshot('./data/tablet.png');
   });
   /* end: tests */
 });

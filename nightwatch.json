@@ -6,6 +6,10 @@
   "custom_commands_path": [
     "./lib/commands/"
   ],
+  "test_workers" : {
+    "enabled" : true,
+    "workers" : 10
+  },
   "test_runner" : {
     "type" : "mocha",
     "options" : {
