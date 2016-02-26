@@ -7,12 +7,12 @@ var breakpoints = [
 
 var categories = [
   'national',
-  // 'sports',
-  // 'entertainment',
-  // 'technology',
-  // 'world',
-  // 'business',
-  // 'lifestyle'
+  'sports',
+  'entertainment',
+  'technology',
+  'world',
+  'business',
+  'lifestyle'
 ];
 
 describe('Suite: Homeppage', function() {
