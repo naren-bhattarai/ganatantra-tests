@@ -1,0 +1,36 @@
+{
+  "src_folders" : ["./tests"],
+  "page_objects_path": ["./lib/components"],
+  "output_folder" : "./results/",
+  "globals_path": "./lib/modules/globals.js",
+  "custom_commands_path": [
+    "./lib/commands/"
+  ],
+  "test_runner" : {
+    "type" : "mocha",
+    "options" : {
+      "ui" : "bdd",
+      "reporter" : "spec"
+    }
+  },
+  "selenium" : {
+    "start_process" : true,
+    "server_path" : "./bin/selenium-server-standalone-2.52.0.jar",
+    "cli_args" : {
+      "webdriver.chrome.driver" : "./bin/chromedriver",
+      "phantomjs.binary.path" : "node_modules/phantomjs/bin/phantomjs"
+    }
+  },
+  "test_settings" : {
+    "default" : {
+      "end_session_on_fail": false,
+      "skip_testcases_on_fail": false,
+      "silent": true,
+      "desiredCapabilities" : {
+        "browserName" : "phantomjs",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true
+      }
+    }
+  }
+}
