@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/npm-install/ganatantra-tests#readme",
   "devDependencies": {
+    "imgur": "^0.1.7",
     "nightwatch": "^0.8.16",
     "phantomjs": "^2.1.3"
   }
