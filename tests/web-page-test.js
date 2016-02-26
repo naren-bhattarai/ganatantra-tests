@@ -30,7 +30,8 @@ describe('Suite: Homeppage', function() {
         .setValue('#url', 'http://www.ganatantra.com/')
         .setValue('select[name=' + browser + ']')
         .click('input[name=submit]')
-        .pause(1000)
+        .pause(500)
+        .waitForElementPresent('#runningHeader', 5000)
         .url(function(res){
           console.log('web-page-test-url: ', res.value);
         })

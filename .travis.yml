@@ -9,3 +9,7 @@ before_script:
 script:
   - npm test
   - node_modules/imgur/cli.js ./data/*
+
+cache:
+  directories:
+    - node_modules
