@@ -5,16 +5,6 @@ var breakpoints = [
   { w: 1920, h:1200 }
 ];
 
-var categories = [
-  'national',
-  'sports',
-  'entertainment',
-  'technology',
-  'world',
-  'business',
-  'lifestyle'
-];
-
 describe('Suite: Homeppage', function() {
   /* begin: setup and teardown */
   beforeEach(function(client, done) {
@@ -42,17 +32,6 @@ describe('Suite: Homeppage', function() {
         .navigate()
         .waitForPageToLoad();
       client.saveScreenshot('./data/' + resolution + '.png');
-    });
-  })
-
-  categories.forEach(function(category){
-    it('/GET category page (' + category + ')', function (client) {
-      client
-        .url('http://www.ganatantra.com/category/' + category)
-        .waitForElementPresent('body', 5000)
-        .waitForElementPresent('#page', 5000)
-        .resizeWindow(breakpoints[3].w, breakpoints[3].h)
-        .saveScreenshot('./data/' + category + '.png');
     });
   })
   /* end: tests */
