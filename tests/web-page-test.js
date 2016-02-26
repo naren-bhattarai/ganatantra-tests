@@ -28,7 +28,7 @@ describe('Suite: Homeppage', function() {
         .waitForElementPresent('#url', 5000)
         .resizeWindow(1920, 1200)
         .setValue('#url', 'http://www.ganatantra.com/')
-        .setValue('select[name=' + browser + ']')
+        .setValue('select[name=browser]', browser)
         .click('input[name=submit]')
         .pause(500)
         .waitForElementPresent('#runningHeader', 5000)
