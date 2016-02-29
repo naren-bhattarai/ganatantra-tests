@@ -1,6 +1,7 @@
 var browsers = [
   'chrome',
-  'firefox'
+  'firefox',
+  'IE11'
 ];
 
 describe('Suite: Homeppage', function() {
