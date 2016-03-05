@@ -4,7 +4,7 @@ var browsers = [
   'IE11'
 ];
 
-describe.only('Suite: Performance tests', function() {
+describe('Suite: Performance tests', function() {
   /* begin: setup and teardown */
   beforeEach(function(client, done) {
     done();
