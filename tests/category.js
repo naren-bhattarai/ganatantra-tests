@@ -8,7 +8,7 @@ var categories = [
   'lifestyle'
 ];
 
-describe('Suite: Homeppage', function() {
+describe('Suite: Category pages', function() {
   /* begin: setup and teardown */
   beforeEach(function(client, done) {
     done();

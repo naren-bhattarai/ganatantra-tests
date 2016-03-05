@@ -5,7 +5,7 @@ var breakpoints = [
   { w: 1920, h:1200 }
 ];
 
-describe('Suite: Homeppage', function() {
+describe('Suite: Form factor', function() {
   /* begin: setup and teardown */
   beforeEach(function(client, done) {
     done();
