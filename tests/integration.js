@@ -17,7 +17,7 @@ describe('Suite: Integration', function() {
   /* begin: tests */
   it('should not have "Read more"', function (client) {
     client
-      .url('http://www.ganatantra.com/category/sports')
+      .url('http://www.ganatantra.com/category/featured')
       .waitForElementPresent('body', 5000)
       .getText('.more-link span', (res)=>{
         client.assert.ok(res && res.value);
@@ -26,7 +26,7 @@ describe('Suite: Integration', function() {
       })
   });
 
-  it('should not have ० on commodity field', function (client) {
+  it.only('should not have ० on commodity field', function (client) {
     client
       .url('http://www.ganatantra.com')
       .waitForElementPresent('body', 5000)
