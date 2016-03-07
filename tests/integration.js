@@ -28,7 +28,7 @@ describe('Suite: Integration', function() {
 
   it('should not have ० on commodity field', function (client) {
     client
-      .url('http://www.ganatantra.com/category/sports')
+      .url('http://www.ganatantra.com')
       .waitForElementPresent('body', 5000)
       .getText('#commodity tbody tr:nth-child(1) > td:nth-child(2)', (res)=>{
         client.assert.ok(res && res.value);
