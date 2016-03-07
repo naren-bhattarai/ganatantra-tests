@@ -30,6 +30,7 @@ describe('Suite: Integration', function() {
     client
       .url('http://www.ganatantra.com')
       .waitForElementPresent('body', 5000)
+      .waitForElementVisible('#commodity tbody tr:nth-child(1) > td:nth-child(2)', 10000)
       .getText('#commodity tbody tr:nth-child(1) > td:nth-child(2)', (res)=>{
         client.assert.ok(res && res.value);
         client.assert.notEqual(res.value, '०');
