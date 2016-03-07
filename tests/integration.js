@@ -26,7 +26,7 @@ describe('Suite: Integration', function() {
       })
   });
 
-  it.only('should not have ० on commodity field', function (client) {
+  it('should not have ० on commodity field', function (client) {
     client
       .url('http://www.ganatantra.com')
       .waitForElementPresent('body', 5000)
