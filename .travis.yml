@@ -6,6 +6,7 @@ env:
   - OS_TYPE=centos OS_VERSION=6 ANSIBLE_VERSION=1.9.2
 
 before_script:
+  - yum install lohit-nepali-fonts
   - npm install
 
 script:
