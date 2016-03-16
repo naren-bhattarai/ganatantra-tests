@@ -29,9 +29,10 @@ describe('Suite: Integration', function() {
   it('should not have ० on commodity field', function (client) {
     client
       .url('http://www.ganatantra.com')
-      .waitForElementPresent('body', 5000)
+      .moveToElement('#commodity', 100, 100)
       .waitForElementVisible('#commodity tbody tr:nth-child(1) > td:nth-child(2)', 10000)
-      .getText('#commodity tbody tr:nth-child(1) > td:nth-child(2)', (res)=>{
+      .getText('#commodity tbody', (res)=>{
+        console.log(res.value);
         client.assert.ok(res && res.value);
         client.assert.notEqual(res.value, '०');
       })
@@ -39,8 +40,9 @@ describe('Suite: Integration', function() {
 
   it('should not have console error', function (client) {
     client
-    .url('http://www.ganatantra.com')
+    .url('http://localhost:3000/index.html')
     .getLog('browser', function(result) {
+      console.log('result: ', result);
       client.assert.ok(!result.length);
     });
   });
