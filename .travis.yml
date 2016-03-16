@@ -2,11 +2,9 @@ language: node_js
 sudo: false
 node_js:
   - "5.5.0"
-env:
-  - OS_TYPE=centos OS_VERSION=6 ANSIBLE_VERSION=1.9.2
 
 before_script:
-  - yum install lohit-nepali-fonts
+  - apt-get install ttf-nepali-fonts
   - npm install
 
 script:
