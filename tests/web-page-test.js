@@ -1,3 +1,5 @@
+var config = require('../config/config');
+
 var browsers = [
   'chrome',
   'firefox',
@@ -28,7 +30,7 @@ describe('Suite: Performance tests', function() {
         .waitForElementPresent('body', 5000)
         .waitForElementPresent('#url', 5000)
         .resizeWindow(1920, 1200)
-        .setValue('#url', 'http://www.ganatantra.com/')
+        .setValue('#url', ['http', config.urls.base].join('://'))
         .setValue('select[name=browser]', browser)
         .click('input[name=submit]')
         .pause(500)

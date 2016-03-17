@@ -1,3 +1,5 @@
+var config = require('../config/config');
+
 var categories = [
   'national',
   'sports',
@@ -28,7 +30,7 @@ describe('Suite: Category pages', function() {
   categories.forEach(function(category){
     it('/GET category page (' + category + ')', function (client) {
       client
-        .url('http://www.ganatantra.com/category/' + category)
+        .url(['http:/', config.urls.base, category, 'featured'].join('/'))
         .waitForElementPresent('body', 5000)
         .waitForElementPresent('#page', 5000)
         .resizeWindow(1920, 1200)
