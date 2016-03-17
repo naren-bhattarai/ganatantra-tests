@@ -1,4 +1,6 @@
-describe('Suite: Integration', function() {
+var config = require('../config/config');
+
+describe.only('Suite: Integration', function() {
   /* begin: setup and teardown */
   beforeEach(function(client, done) {
     done();
@@ -17,7 +19,7 @@ describe('Suite: Integration', function() {
   /* begin: tests */
   it('should not have "Read more"', function (client) {
     client
-      .url('http://www.ganatantra.com/category/featured')
+      .url(['http:/', config.urls.base, 'category', 'featured'].join('/'))
       .waitForElementPresent('body', 5000)
       .getText('.more-link span', (res)=>{
         client.assert.ok(res && res.value);
@@ -28,7 +30,7 @@ describe('Suite: Integration', function() {
 
   it('should not have ० on commodity field', function (client) {
     client
-      .url('http://www.ganatantra.com')
+      .url(['http', config.urls.base].join('://'))
       .moveToElement('#commodity', 100, 100)
       .waitForElementVisible('#commodity tbody tr:nth-child(1) > td:nth-child(2)', 10000)
       .getText('#commodity tbody', (res)=>{
@@ -40,7 +42,7 @@ describe('Suite: Integration', function() {
 
   it('should not have console error', function (client) {
     client
-    .url('http://localhost:3000/index.html')
+    .url(['http', config.urls.base].join('://'))
     .getLog('browser', function(result) {
       console.log('result: ', result);
       client.assert.ok(!result.length);
