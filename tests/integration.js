@@ -17,7 +17,7 @@ describe('Suite: Integration', function() {
   /* end: setup and teardown */
 
   /* begin: tests */
-  it.only('should not have "Read more"', function (client) {
+  it('should not have "Read more"', function (client) {
     client
       .url(['http:/', config.urls.base, 'category', 'sports'].join('/'))
       .waitForElementPresent('body', 5000)
