@@ -6,7 +6,7 @@
   "custom_commands_path": [
     "./lib/commands/"
   ],
-  "test_workers": false,
+  "test_workers": true,
   "test_runner" : {
     "type" : "mocha",
     "options" : {
@@ -28,7 +28,7 @@
       "skip_testcases_on_fail": false,
       "silent": true,
       "desiredCapabilities" : {
-        "browserName" : "chrome",
+        "browserName" : "phantomjs",
         "javascriptEnabled" : true,
         "acceptSslCerts" : true
       }
