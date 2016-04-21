@@ -41,7 +41,7 @@ describe('Suite: Performance tests', function() {
         .pause(500)
         .waitForElementPresent('#runningHeader', 5000)
         .url(function(res){
-          console.log('    ✓ [' + browser + '] web-page-test-url: ', res.value);
+          console.log('    ✓ [' + browser.browser + ', ' + browser.location + '] web-page-test-url: ', res.value);
         })
     });
   })
