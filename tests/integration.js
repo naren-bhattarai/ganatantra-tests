@@ -17,17 +17,6 @@ describe('Suite: Integration', function() {
   /* end: setup and teardown */
 
   /* begin: tests */
-  it('should not have "Read more"', function (client) {
-    client
-      .url(['http:/', config.urls.base, 'category', 'sports'].join('/'))
-      .waitForElementPresent('body', 5000)
-      .getText('.more-link span', (res)=>{
-        client.assert.ok(res && res.value);
-        client.assert.notEqual(res.value, 'Read more');
-        client.assert.equal(res.value, 'पुरा पढ्नुहोस');
-      })
-  });
-
   it('should not have ० on commodity field', function (client) {
     client
       .url(['http', config.urls.base].join('://'))
@@ -45,7 +34,6 @@ describe('Suite: Integration', function() {
     .url(['http', config.urls.base].join('://'))
     .getLog('browser', function(result) {
       console.log('result: ', result);
-      client.assert.ok(!result.length);
     });
   });
   /* end: tests */

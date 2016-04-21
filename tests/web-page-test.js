@@ -1,9 +1,13 @@
 var config = require('../config/config');
 
 var browsers = [
-  'chrome',
-  'firefox',
-  'IE11'
+  { browser: 'chrome', location: 'Indore_IN' },
+  { browser: 'chrome', location: 'Sydney2_AU' },
+  { browser: 'chrome', location: 'SouthAfrica_Loc' },
+  { browser: 'chrome', location: 'LosAngeles_CA' },
+  { browser: 'firefox', location: 'Singapore' },
+  { browser: 'firefox', location: 'London_UK' },
+  { browser: 'IE11', location: 'Dulles_VA' }
 ];
 
 describe('Suite: Performance tests', function() {
@@ -31,7 +35,8 @@ describe('Suite: Performance tests', function() {
         .waitForElementPresent('#url', 5000)
         .resizeWindow(1920, 1200)
         .setValue('#url', ['http', config.urls.base].join('://'))
-        .setValue('select[name=browser]', browser)
+        .setValue('#location', browser.location)
+        .setValue('select[name=browser]', browser.browser)
         .click('input[name=submit]')
         .pause(500)
         .waitForElementPresent('#runningHeader', 5000)
