@@ -1,6 +1,6 @@
 var config = require('../config/config');
 
-describe('Suite: Integration', function() {
+describe.skip('Suite: Integration', function() {
   /* begin: setup and teardown */
   beforeEach(function(client, done) {
     done();
