@@ -36,5 +36,13 @@ describe.skip('Suite: Integration', function() {
       console.log('result: ', result);
     });
   });
+
+  it('share twitter: refusetowin', function(client){
+    client
+      .url('http://www.refusetowin.com')
+      .waitForElementPresent('body', 5000)
+      .click('.st-twitter-counter')
+      .pause(500);
+  })
   /* end: tests */
 });
