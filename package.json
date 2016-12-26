@@ -4,7 +4,7 @@
   "description": "UI tests",
   "main": "index.js",
   "scripts": {
-    "test": "./bin/nightwatch"
+    "test": "./node_modules/nightwatch/bin/nightwatch"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   "homepage": "https://github.com/npm-install/ganatantra-tests#readme",
   "devDependencies": {
     "imgur": "^0.1.7",
-    "nightwatch": "^0.8.16",
+    "nightwatch": "*",
     "phantomjs": "^2.1.3"
   }
 }

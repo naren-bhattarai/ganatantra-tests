@@ -1,19 +1,7 @@
 {
   "src_folders" : ["./tests"],
-  "page_objects_path": ["./lib/components"],
   "output_folder" : "./results/",
-  "globals_path": "./lib/modules/globals.js",
-  "custom_commands_path": [
-    "./lib/commands/"
-  ],
   "test_workers": true,
-  "test_runner" : {
-    "type" : "mocha",
-    "options" : {
-      "ui" : "bdd",
-      "reporter" : "spec"
-    }
-  },
   "selenium" : {
     "start_process" : true,
     "server_path" : "./bin/selenium-server-standalone-2.52.0.jar",
