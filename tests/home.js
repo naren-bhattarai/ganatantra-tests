@@ -1,5 +1,5 @@
 module.exports = {
-  '@disabled': true,
+  '@disabled': false,
   'KasleJityo.com: Homepage' : function (client) {
     client
       .url('https://www.kaslejityo.com')

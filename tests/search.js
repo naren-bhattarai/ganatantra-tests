@@ -1,6 +1,6 @@
 //test
 module.exports = {
-  '@disabled': true,
+  '@disabled': false,
   'KasleJityo.com: Load recent posts(s)' : function (client) {
     client
       .url('https://www.kaslejityo.com/news/2007')
