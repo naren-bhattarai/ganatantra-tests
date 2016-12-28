@@ -1,4 +1,5 @@
 module.exports = {
+  '@disabled': true,
   'KasleJityo.com: Category Page' : function (client) {
     client
       .url('https://www.kaslejityo.com/category/football')
